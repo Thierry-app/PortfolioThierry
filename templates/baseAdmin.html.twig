@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Thierry PRUVOST - Développement web et mobile">
+        <meta name="description" content="Portfolio de Thierry PRUVOST - Développeur web et mobile">
+
+
+        <title>- Thierry PRUVOST -{% block title %}base admin{% endblock %}</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        {# pas de feuille de style pour base admin on est en full bootstrap <link rel="stylesheet" href="{{ asset('css/style.css')}}">#}
+        <link rel="stylesheet" href="{{ asset('css/styleAdmin.css')}}">
+
+            {#FAVICONS#}
+            <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('favicon/android-icon-192x192.png') }}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+            <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon/favicon-96x96.png') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+
+
+        {% block stylesheets %}{% endblock %}
+
+    </head>
+
+    <body>
+        <header class="container-fluid p-3 text-center bg-dark text-light">
+            <h2>Espace administrateur</h2>
+        </header>
+
+
+    <main class="container-fluid">
+        <div class="row">
+            <aside class="col-1 bg-secondary text-light text-center py-3">
+                <ul class="p-0 m-0">
+                    <li class="py-2">A</li>
+                    <li class="py-2">B</li>
+                    <li class="py-2">C</li>
+                    <li class="py-2">D</li>
+                    <li class="py-2">E</li>
+                    <li class="py-2">F</li>
+                    <li class="py-2">G</li>
+                </ul>
+            </aside>
+            <section class="col-11">
+                {% block body %}{% endblock %}
+            </section>
+        </div>
+    
+    </main>
+    <footer class="container-fluid p-1 text-center bg-dark text-light fixed-bottom">
+        <p>Copyright &copy; 2021 - Thierry PRUVOST</p>
+    </footer>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+
+</html>
+

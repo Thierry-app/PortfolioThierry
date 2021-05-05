@@ -11,31 +11,69 @@
     <header>
         <div id="header-img"></div>
         <div id="header-text">
-            <h1>
-                Développeur web et mobile
-             </h1>
-            <h2>
-                Thierry PRUVOST
-             </h2>
+            <h1>Développeur web et mobile</h1>
+            <h2>Thierry PRUVOST</h2>
         </div>
     </header>
 
-    <main>
-        <div class="container-fluid">
-            <h2>
-                A propos
-            </h2>
+    <main class="p-5">
+        <div class="container-fluid py-5">
+            <h2>A propos</h2>
         </div>
-        <div class="container-fluid">
-            <h2>
-                Réalisations
-            </h2>
+        <div class="container-fluid py-5">
+            <h2>Réalisations</h2>
         </div>
-        <div class="container-fluid">
-            <h2>
-                Compétences 
-            </h2>
+        <div class="container-fluid py-5" id="competences">
+            <h2>Compétences</h2>
+            {# {{ dump(competences) }} #}
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                    <h3>Technologies</h3>
+                    <div class="dropdown-divider"></div>{# trait clair sous le titre #}
+                    {% for competence in competences %}
+                        {% if competence.categorie == 'technologie' %}
+                        <p>
+                            <img src="{{ asset('img/skills/') ~ competence.img}}" alt="image {{competence.titre}}"> 
+                            - {{competence.titre}} 
+                        </p>
+                        {% endif %}
+                    {% endfor %}    
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                    <h3>Frameworks / bibliothèques</h3>
+                    <div class="dropdown-divider"></div>{# trait clair sous le titre #}
+                    {% for competence in competences %}
+                        {% if competence.categorie == 'framework' %}
+                        <p>
+                            <img src="{{ asset('img/skills/') ~ competence.img}}" alt="image {{competence.titre}}"> 
+                            - {{competence.titre}} 
+                        </p>
+                        {% endif %}
+                    {% endfor %}
+                    {% for competence in competences %}
+                        {% if competence.categorie == 'bibliothèque' %}
+                        <p>
+                            <img src="{{ asset('img/skills/') ~ competence.img}}" alt="image {{competence.titre}}"> 
+                            - {{competence.titre}} 
+                        </p>
+                        {% endif %}
+                    {% endfor %}  
+                </div>
+                <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mt-3">
+                    <h3>CMS</h3>
+                    <div class="dropdown-divider"></div>{# trait clair sous le titre #}
+                    {% for competence in competences %}
+                        {% if competence.categorie == 'CMS' %}
+                        <p>
+                            <img src="{{ asset('img/skills/') ~ competence.img}}" alt="image {{competence.titre}}"> 
+                            - {{competence.titre}} 
+                        </p>
+                        {% endif %}
+                    {% endfor %}    
+                </div>
+            </div>
         </div>
+
     </main>
 
     <footer class="container-fluid">
