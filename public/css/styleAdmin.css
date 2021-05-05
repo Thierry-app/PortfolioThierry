@@ -14,6 +14,10 @@ aside{
     min-height: calc(100vh - 78px - 42px);
 }
 
+table img{
+    width:20px;
+}
+
 /****************************** FOOTER ****************************/
 footer{
     font-size: 0.75em;
