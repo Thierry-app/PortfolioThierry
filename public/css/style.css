@@ -1,0 +1,98 @@
+/****************************** RESET *****************************/
+*{                  /* étoile pour la totalité des commandes */ 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/****************************** GLOBAL ****************************/
+
+    :root{
+        --color-white: #FFFFFF;
+        --color-light-grey: #DDDDDD;
+        --color-grey: #888888;
+        --color-black: #000000;
+        --color-red: #FF5B5B;
+        --color-green: #62DA62;
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('../fonts/Montserrat-Regular.eot');
+        src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+            url('../fonts/Montserrat-Regular.woff') format('woff'),
+            url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Raleway';
+        src: url('../fonts/Raleway-Thin.eot');
+        src: url('../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Raleway-Thin.woff2') format('woff2'),
+            url('../fonts/Raleway-Thin.woff') format('woff'),
+            url('../fonts/Raleway-Thin.svg#Raleway-Thin') format('svg');
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    *{
+        font-family: 'Raleway', sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+
+/****************************** HEADER ****************************/
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-black);
+}
+
+header #header-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.25;
+}
+
+header #header-text {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 0;
+}
+
+header h1,
+header h2{
+    color: var(--color-light-grey);
+    text-align: center;
+    padding: 0.5em;
+}
+
+/******************************* MAIN *****************************/
+/****************************** FOOTER ****************************/
+footer{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+}
+
+footer img{
+    width:50%;
+}

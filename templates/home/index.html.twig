@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Mon accueil
+            
+        
+    
+{% endblock %}
+
+{% block body %}
+    <header>
+        <div id="header-img"></div>
+        <div id="header-text">
+            <h1>
+                Développeur web et mobile
+             </h1>
+            <h2>
+                Thierry PRUVOST
+             </h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <h2>
+                A propos
+            </h2>
+        </div>
+        <div class="container-fluid">
+            <h2>
+                Réalisations
+            </h2>
+        </div>
+        <div class="container-fluid">
+            <h2>
+                Compétences 
+            </h2>
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 my-auto order-md-1 pt-5">
+                <ul>
+                    <li>Haut de page</li>
+                    <li>A propos</li>
+                    <li>Réalisations</li>
+                    <li>Compétences</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 my-auto order-md-3 order-lg-2 pt-5">
+                <img src="{{ asset('img/logo-white.gif') }}" class="rounded-circle" alt="logo Thierry PRUVOST">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 my-auto order-md-2 order-lg-3 pt-5">
+                <h3>Thierry PRUVOST</h3>
+                <h4>Développeur web et mobile</h4>
+                <div class="dropdown-divider mx-4"></div>
+                <p>28 rue de l'Amiral Courbet</p>
+                <p>59100 ROUBAIX</p>
+                <p><a href="tel:+33682975971"> 06 82 97 59 71</a>
+                </p>
+                <p>
+                    <a href="mailto:informatique.app.59@gmail.com">
+                        informatique.app.59@gmail.com
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+            <p id="copyright">copyright &copy; 2021 Thierry PRUVOST</p>
+            </div>
+        </div>
+
+    </footer>
+
+    {% endblock %}
+        
