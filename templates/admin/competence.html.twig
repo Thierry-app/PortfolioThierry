@@ -18,19 +18,19 @@
     <tbody>
         {% for competence in competences %}
         <tr>
-            <td>{{ loop.index }}</td>
+            <td>{{ loop.index }}</td>{#loop.revindex pour afficher dans le sens invese#}
             <td>{{ competence.categorie }}</td>
             <td>{{ competence.titre }}</td>
             <td><img src="{{ asset('img/skills/') ~ competence.img }}" alt="logo {{ competence.titre }}"</td>
             <td>
                 <a href="#"><i class="fas fa-pen-square"></i></a>
-                <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>
+                <a href="{{ path('delete_competence', {'id':competence.id}) }}"><i class="fas fa-trash-alt text-danger"></i></a>
         </tr>
     {% endfor %}
     </tbody>
 
 </table>
 <div class="text-right my-5">
-<a href="#" class="btn btn-outline-dark">Ajouter une compétence</a>
+<a href="{{ path('create_competence') }}" class="btn btn-outline-dark">Ajouter une compétence</a>
 </div>
 {% endblock %}

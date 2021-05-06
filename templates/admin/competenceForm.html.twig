@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}compétence - formulaire{% endblock %}
+
+{% block body %}
+
+    <h1 class="mb-5">Ajouter ou modifier une compétence</h1>
+
+    {#{{ form(competenceForm) }}#}
+    {{ form_start(competenceForm) }}  {#j'ouvre le formulaire#}
+        {{ form_row(competenceForm.categorie, {
+            label: 'Catégorie'
+        }) }}
+
+        {{ form_row(competenceForm.titre) }}
+
+        {{ form_row(competenceForm.img, {
+        label: 'Image'
+        }) }}
+
+        <div class="text-right">
+        <a href="{{ path('competences') }}"><button class="btn btn-danger mr-3">Annulation</a>
+        <button type="submit" class="btn btn-success">Validation</button>
+        </div>
+
+    {{ form_end(competenceForm) }}
+
+{% endblock %}
