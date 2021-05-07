@@ -1,0 +1,20 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}admin - à propos{% endblock %}
+
+{% block body %}
+
+<h1 class="mb-5">Modifier la section à propos</h1>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        {{ form_start(aProposForm) }}
+            {{ form_widget(aProposForm.texte) }}{#pour cachet l'id Texte#}
+            <div class="texte-right my-5">
+                <a href="{{ path('a_propos') }}" class="btn btn-danger mr-3">Annuler</a>
+                <button type="submit" class="btn btn-success">Validation</button>
+            </div>
+        {{ form_end(aProposForm) }}
+        </div>
+    </div>   
+{% endblock %}
