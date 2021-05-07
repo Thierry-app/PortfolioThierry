@@ -23,7 +23,7 @@
             <td>{{ competence.titre }}</td>
             <td><img src="{{ asset('img/skills/') ~ competence.img }}" alt="logo {{ competence.titre }}"</td>
             <td>
-                <a href="#"><i class="fas fa-pen-square"></i></a>
+                <a href="{{ path('update_competence', {'id':competence.id}) }}"><i class="fas fa-pen-square"></i></a>
                 <a href="{{ path('delete_competence', {'id':competence.id}) }}"><i class="fas fa-trash-alt text-danger"></i></a>
         </tr>
     {% endfor %}

@@ -47,6 +47,14 @@
                 </ul>
             </aside>
             <section class="col-11 p-5">
+                {#Affichage des messages flash#}
+                {% for label, messages in app.flashes %} {#récupération des labels qu'il y a dans ma cession#}
+                    {% for message in messages %}
+                        <div class = "flash-{{ label }} bg-{{ label }} text-center text-light p-1 mb-5 rounded">
+                        {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
                 {% block body %}{% endblock %}
             </section>
         </div>

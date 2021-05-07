@@ -1,3 +1,10 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
     form_themes: ['bootstrap_4_layout.html.twig']
+    globals:
+        copyright: 'Copyright &copy; 2021 - Thierry PRUVOST'
+        contact_address: '28 rue de l''Amiral Courbet'
+        contact_zip: 59100
+        contact_city: 'ROUBAIX'
+        contact_phone: '06.82.97.59.71'
+        contact_email: 'informatique.app.59@gmail.com'
