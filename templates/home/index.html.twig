@@ -19,6 +19,11 @@
     <main class="p-5">
         <div id="apropos" class="container-fluid py-5">
             <h2>A propos</h2>
+            <div class="row">
+                <div class="col-sm-12 col-sm-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-justify mt-3">
+                {{ aPropos.texte }}
+                </div>
+            </div>
         </div>
         <div id="realisations" class="container-fluid py-5">
             <h2>Réalisations</h2>
@@ -75,6 +80,9 @@
         </div>
         <div id="contact" class="container-fluid py-5">
             <h2>Contact</h2>
+                <div class="col-sm-12 col-md-8 col-lg-6 offset-lg-6 offset-lg-3 col-xl-4 offset-xl-4 mt-3">
+                {{ form(contactForm) }}
+            </div>
         </div>
 
     </main>
