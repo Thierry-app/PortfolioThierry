@@ -17,6 +17,10 @@ aside{
 table img{
     width:20px;
 }
+.custom-file-label::after {
+    content: "Choisir...";
+}
+
 
 /****************************** FOOTER ****************************/
 footer{

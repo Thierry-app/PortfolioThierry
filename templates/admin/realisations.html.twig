@@ -1,0 +1,42 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}admin - réalisations{% endblock %}
+
+{% block body %}
+
+<h1 class="mb-5">Liste des réalisations</h1>
+    <table class="table table-bordered table-dark text-center table-over table-sm">
+    <thead>
+        <tr>
+            <th class="align-middle">N°</th>
+            <th class="align-middle">Nom</th>
+            <th class="align-middle">Type</th>
+            <th class="align-middle">Date</th>
+            <th class="align-middle">Description</th>
+            <th class="align-middle">Image</th>
+            <th class="align-middle">Actions Modifications Suppression</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for realisations in realisations %}
+        <tr>
+            <td class="align-middle">{{ loop.index }}</td>{#loop.revindex pour afficher dans le sens invese#}
+            <td class="align-middle">{{ realisations.nom }}</td>
+            <td class="align-middle">{{ realisations.type }}</td>
+            <td class="align-middle">{#{{ realisations.created_at }}#}</td>
+            <td class="text-left">{{ realisations.description }}</td>
+            <td class="align-middle"><img src="{{ asset('img/realisations/') ~ realisations.image }}" alt="logo {{ realisations.nom }}"</td>
+            <td class="align-middle">
+                <a href="#"><i class="fas fa-pen-square"></i></a> - {#{{ path('update_realisations', {'id':realisations.id}) }}#}
+                <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>{#{{ path('delete_realisations', {'id':realisations.id}) }}#}
+        </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+<div class="text-right my-5">
+<a href="{{ path('create_realisations') }}" class="btn btn-outline-dark">Ajouter une réalisation</a> 
+</div>
+    
+
+{% endblock %}
